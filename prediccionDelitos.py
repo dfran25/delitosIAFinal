@@ -33,22 +33,22 @@ st.set_page_config(
 
 @st.cache_data
 def load_data():
-  df= pd.read_csv('C:/Users/USUARIO/Documents/UNAB/inteligenciaArtificial/delitos/Delito_Bucaramanga_preprocesar.csv', delimiter=",") #Currently on my local machine
+  df= pd.read_csv('Delito_Bucaramanga_preprocesar.csv', delimiter=",") #Currently on my local machine
   return df
 df= load_data()
 
 @st.cache_resource
 def load_models():
-  codEdad=jb.load('C:/Users/USUARIO/Documents/UNAB/inteligenciaArtificial/delitos/codEdad.bin')
-  codHorario=jb.load('C:/Users/USUARIO/Documents/UNAB/inteligenciaArtificial/delitos/codHorario.bin')
-  codGenero=jb.load('C:/Users/USUARIO/Documents/UNAB/inteligenciaArtificial/delitos/codGenero.bin')
-  codDia=jb.load('C:/Users/USUARIO/Documents/UNAB/inteligenciaArtificial/delitos/codDia.bin')
-  codComuna=jb.load('C:/Users/USUARIO/Documents/UNAB/inteligenciaArtificial/delitos/codComuna.bin')
-  modeloBA=jb.load('C:/Users/USUARIO/Documents/UNAB/inteligenciaArtificial/delitos/modeloBA.bin')
+  codEdad=jb.load('codEdad.bin')
+  codHorario=jb.load('codHorario.bin')
+  codGenero=jb.load('codGenero.bin')
+  codDia=jb.load('codDia.bin')
+  codComuna=jb.load('codComuna.bin')
+  modeloBA=jb.load('modeloBA.bin')
   return codEdad,codHorario,codGenero,codDia,codComuna,modeloBA
 codEdad,codHorario,codGenero,codDia,codComuna,modeloBA = load_models()
 
-image = Image.open('C:/Users/USUARIO/Documents/UNAB/inteligenciaArtificial/delitos/logo_unab.jpg')
+image = Image.open('logo_unab.jpg')
 st.image(image,
          caption=None, width=150, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
@@ -164,7 +164,7 @@ st.write("El númerp de tipos de delitos registrados  ", len(df['DELITO_SOLO'].u
 st.write(df.head(5))
 #Opciones de la barra lateral
 
-logo=Image.open("C:/Users/USUARIO/Documents/UNAB/inteligenciaArtificial/delitos/menu.jpg")
+logo=Image.open("menu.jpg")
 st.sidebar.write('...')
 st.sidebar.image(logo, width=150)
 st.sidebar.header('Seleccione los datos de entrada')
