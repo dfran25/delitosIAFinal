@@ -61,7 +61,7 @@ with st.container():
   from PIL import Image
 
 
-  st.write("Realizado por Diego Lozano, Miguel Estupiñan, Paola Galvis, Maria Alfonso :mortar_board:")
+  st.write("Realizado por Diego Lozano, Miguel Estupiñan, Paola Galvis, Maria Alfonso , Daniel Rojas , Juan Diaz , Esteban Garcia :mortar_board:")
   st.write("**Estudiantes Universidad Autonoma de Bucaramanga (UNAB)**")
   st.write("""
 
@@ -160,7 +160,7 @@ st.subheader("Detalle del dataset usado en el proyecto")
 
 st.write("El número de registros cargados es: ", len(df))
 #st.write("comprendido desde ", pd.to_datetime(df['FECHA_COMPLETA']).min(), " hasta ", pd.to_datetime(df['FECHA_COMPLETA']).max())
-st.write("El númerp de tipos de delitos registrados  ", len(df['DELITO_SOLO'].unique()), ", de", len(df['BARRIOS_HECHO'].unique()), "barrios en ",len(df['NOM_COM'].unique()),  " comunas")
+st.write("El número de tipos de delitos registrados  ", len(df['DELITO_SOLO'].unique()), ", de", len(df['BARRIOS_HECHO'].unique()), "barrios en ",len(df['NOM_COM'].unique()),  " comunas")
 st.write(df.head(5))
 #Opciones de la barra lateral
 
