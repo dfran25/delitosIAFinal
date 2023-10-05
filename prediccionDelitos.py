@@ -190,7 +190,7 @@ def seleccionar(generos,comunas, diaSemana,edades,horas):
   hora=st.sidebar.selectbox("Seleccione la jornada ",horas)
   
   st.sidebar.subheader('Selector de mes') 
-  mes=st.sidebar.slider('número del mes', 1, 12, 1)
+  mes=st.sidebar.slider('Número del mes', 1, 12, 1)
   
   #Filtrar por departamento
   st.sidebar.subheader('Selector de comuna')
