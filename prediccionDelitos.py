@@ -179,14 +179,14 @@ def seleccionar(generos,comunas, diaSemana,edades,horas):
 
   #Filtrar por estaciones
   st.sidebar.subheader('Selector del dia de la semana')
-  dia=st.sidebar.selectbox("Selecciones del dia de la semana",diaSemana)
+  dia=st.sidebar.selectbox("Seleccione del dia de la semana",diaSemana)
   
   #Filtrar por estaciones
   st.sidebar.subheader('Selector del dia del rango de edad')
-  edad=st.sidebar.selectbox("Selecciones la edad",edades)
+  edad=st.sidebar.selectbox("Seleccione la edad",edades)
   
   #Filtrar por estaciones
-  st.sidebar.subheader('Selector del rengo de dia')
+  st.sidebar.subheader('Selector del rango de dia')
   hora=st.sidebar.selectbox("Seleccione la jornada ",horas)
   
   st.sidebar.subheader('Selector de mes') 
